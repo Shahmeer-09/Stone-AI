@@ -6,9 +6,14 @@ import {
   Register,
   Error,
   Homelayout,
+  Summary,
+  JsCode,
+  Para,
+  ChatBot,
 } from "./pages/index";
 import { action as regAction } from "./pages/Register";
 import { action as logAction } from "./pages/Login";
+import { loader as dashLoader } from "./pages/Dashboard";
 function App() {
   const router = createBrowserRouter([
     {
@@ -28,14 +33,30 @@ function App() {
         {
           path: "login",
           element: <Login />,
-          action: logAction
+          action: logAction,
         },
         {
           path: "dashboard",
-          element: <Dashboard/>,
-          children:[
-
-          ]
+          element: <Dashboard />,
+          loader: dashLoader,
+          children: [
+            {
+              path: "summary",
+              element: <Summary />,
+            },
+            {
+              path: "jscode",
+              element: <JsCode />,
+            },
+            {
+              path: "paragraph",
+              element: <Para />,
+            },
+            {
+              path: "chatbot",
+              element: <ChatBot />,
+            }
+          ],
         },
       ],
     },

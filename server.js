@@ -16,6 +16,7 @@ app.use(cookieparser())
 app.use(express.json());
 
 app.use("/api/auth",  require("./router/authroutes"));
+app.use("/api/user",  require("./router/userroute"));
 
 
 app.use("*", (req, res) => {
