@@ -1,9 +1,10 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-const Homelayout = () => {
-  return (
-     <Outlet/>
-  )
-}
+import { Outlet } from "react-router-dom";
 
-export default Homelayout
+const Homelayout = () => {
+ 
+  return (
+    <Outlet/>
+  )
+};
+
+export default Homelayout;

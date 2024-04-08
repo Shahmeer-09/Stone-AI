@@ -13,16 +13,25 @@ import {
 } from "./pages/index";
 import { action as regAction } from "./pages/Register";
 import { action as logAction } from "./pages/Login";
+import { action as summarizeaction } from "./pages/Summary";
+import { action as chatAction } from "./pages/ChatBot";
+import { action as codeAction } from "./pages/JsCode";
+import { action as paraAction } from "./pages/Para";
 import { loader as dashLoader } from "./pages/Dashboard";
+import { loader as landingLoader } from "./pages/Landingpage";
+
+// import { loader as landingLoader } from "./pages/Landingpage";
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Homelayout />,
       errorElement: <Error />,
+
       children: [
         {
           index: true,
+          loader: landingLoader,
           element: <Landingpage />,
         },
         {
@@ -43,18 +52,22 @@ function App() {
             {
               path: "summary",
               element: <Summary />,
+              action: summarizeaction,
             },
             {
               path: "jscode",
               element: <JsCode />,
+              action: codeAction,
             },
             {
               path: "paragraph",
               element: <Para />,
+              action: paraAction,
             },
             {
               path: "chatbot",
               element: <ChatBot />,
+              action: chatAction,
             }
           ],
         },

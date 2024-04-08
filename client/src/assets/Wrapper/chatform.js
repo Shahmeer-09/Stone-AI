@@ -16,16 +16,21 @@ padding-bottom: 2rem;
    }
  .form-textarea{
     resize: none;
+    font-family: Arial, Helvetica, sans-serif;
  }
  .card{
     min-height: 300px;
     border: 1px solid var(--primary-500);
     border-radius: 5px;
+    overflow-x: scroll;
   padding  : 1.5rem;
  }
  p{
-
-    min-height:inherit;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
+    text-overflow: ellipsis;
+    width: max-content;
+    text-align: left;
  }
 
 `

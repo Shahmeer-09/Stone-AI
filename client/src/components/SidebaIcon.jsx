@@ -28,7 +28,7 @@ const SidebaIcon = () => {
             <NavLink to={'paragraph'}>
             <div className="iconDraw">
                <FaRegFileAlt  className='icon'/>
-               <p>Generate a pragrpah</p>
+               <p>Get the bullet points</p>
             </div>
             </NavLink>
         </div>

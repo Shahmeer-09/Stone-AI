@@ -17,6 +17,7 @@ app.use(express.json());
 
 app.use("/api/auth",  require("./router/authroutes"));
 app.use("/api/user",  require("./router/userroute"));
+app.use("/api/openAi",  require("./router/openAiRoute"));
 
 
 app.use("*", (req, res) => {

@@ -5,7 +5,7 @@ position: relative;
 height: 100vh;
 position: relative;
  .logout{
-    position: absolute;
+    position: fixed;
     bottom:100px;
     display: flex;
     flex-direction: row-reverse;
@@ -16,7 +16,7 @@ position: relative;
     color: white;
     border-radius: 0 50px 50px 0;
     transition: all .3s ease-in-out;
-    left: ${({menuactive})=> (menuactive ? "0px": "-65px")};
+
     & .menu{
         font-size: 1.3rem;
         cursor: pointer;
