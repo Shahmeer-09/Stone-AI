@@ -4,6 +4,7 @@
   "description": "Stone-Ai",
   "main": "server.js",
   "scripts": {
+    "porject-setup":"npm i && cd client && npm i  ",
     "dev": "nodemon server.js",
     "start": "node server.js"
   },

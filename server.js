@@ -12,13 +12,16 @@ if(process.env.ENVIRONMENT==='development'){
 }
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.resolve(__dirname, "client/dist")));
 app.use(cookieparser())
 app.use(express.json());
 
 app.use("/api/auth",  require("./router/authroutes"));
 app.use("/api/user",  require("./router/userroute"));
 app.use("/api/openAi",  require("./router/openAiRoute"));
-
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client/dist", "index.html"));
+})
 
 app.use("*", (req, res) => {
   res.status(StatusCodes.NOT_FOUND).send("page not found");
@@ -33,3 +36,5 @@ try {
   console.log(error);
   process.exit(1);
 }
+
+module.exports=app
