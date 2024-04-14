@@ -1,6 +1,6 @@
 import axios from 'axios'
 const customFetch = axios.create({
-  baseURL: '/api',
+  baseURL: `${window.location.origin}/api`,
 });
 
 export default customFetch;
