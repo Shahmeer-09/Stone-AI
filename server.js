@@ -7,6 +7,7 @@ const morgan = require('morgan')
 const cookieparser = require('cookie-parser');
 const { StatusCodes } = require("http-status-codes");
 const cors = require('cors')
+const path = require("path");
 if(process.env.ENVIRONMENT==='development'){
   app.use(morgan('tiny'))
 }

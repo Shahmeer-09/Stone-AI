@@ -28,7 +28,7 @@ const Dashboard = () => {
        await customFetch.get("/auth/logout");
        toast.success("Logged out successfully");
        
-       navigate("/login");
+       navigate("/");
      } catch (error) {
        toast.error(error.response?.data?.msg);
      }
